@@ -34,7 +34,7 @@ android:
 
 before_install:
   - mkdir "$ANDROID_HOME/licenses" || true
-  - cp ./android-sdk-licenses/* "$ANDROID_HOME/licenses/"
+  - cp ./android-sdk-license/* "$ANDROID_HOME/licenses/"
   - chmod +x gradlew
   - ./gradlew dependencies || true
 
