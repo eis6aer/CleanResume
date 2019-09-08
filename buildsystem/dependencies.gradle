@@ -5,6 +5,8 @@ ext {
     gsonVersion = '2.0.1'
     daggerAndroidVersion = '2.21'
     httpLoggingInterceptorVersion = '3.9.0'
+    haarmanMockitoVersion = '2.1.0'
+    mockitoInline = '2.13.0'
 
     mainDependencies = [
         rxJava : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
@@ -20,5 +22,10 @@ ext {
     kaptDependencies = [
         daggerCompiler : "com.google.dagger:dagger-compiler:$daggerAndroidVersion",
         daggerAndroidProcessor : "com.google.dagger:dagger-android-processor:$daggerAndroidVersion"
+    ]
+
+    testDependencies = [
+        nhaarmanMockito : "com.nhaarman.mockitokotlin2:mockito-kotlin:$haarmanMockitoVersion",
+        mockitoInline : "org.mockito:mockito-inline:2.13.0"
     ]
 }
