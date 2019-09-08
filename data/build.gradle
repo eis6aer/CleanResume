@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'realm-android'
-
+apply from: '../jacoco.gradle'
 
 android {
     compileSdkVersion 28
@@ -22,6 +22,11 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            testCoverageEnabled true
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -62,4 +67,13 @@ dependencies {
 }
 repositories {
     mavenCentral()
+}
+
+android.testOptions.unitTests.all {
+    // Configure whether failing tests should fail the build
+    ignoreFailures false
+
+    testLogging {
+        events "passed", "failed", "standardOut", "standardError"
+    }
 }

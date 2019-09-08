@@ -27,4 +27,8 @@ comment:
 
   ignore:
     - "**/di/**"       # ignore dagger
-    - "**/io.realm/**" # ignore realm
+    - "**/io.realm/**"
+    - "**/*Fragment*.*"
+    - "**/*Activity*.*"
+    - "**/adapters/**"
+    - "**/*Contract*.*"
