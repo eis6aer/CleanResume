@@ -30,6 +30,8 @@ android:
     - extra-google-m2repository
     - extra-google-google_play_services
     - addon-google_apis-google-19 # google play services
+    - $ANDROID_TARGET
+    - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
   licenses:
     - 'android-sdk-license-.+'
     - '.+'
