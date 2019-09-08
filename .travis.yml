@@ -44,4 +44,4 @@ after_success:
 
 script:
   - echo "Building app"
-  - ./gradlew clean assemble
+  - ./gradlew clean assemble connectedCheck
