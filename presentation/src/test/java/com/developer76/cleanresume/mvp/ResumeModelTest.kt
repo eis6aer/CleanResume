@@ -1,5 +1,6 @@
 package com.developer76.cleanresume.mvp
 
+import com.developer76.cleanresume.RxSchedulersOverride
 import com.developer76.cleanresume.mvp.resume.ResumeModel
 import com.developer76.domain.model.Resume
 import com.developer76.domain.usecase.ResumeUseCase
@@ -9,12 +10,12 @@ import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
-import io.reactivex.schedulers.Schedulers
-import io.reactivex.android.plugins.RxAndroidPlugins
-
-
+import org.junit.rules.TestRule
 
 class ResumeModelTest {
+
+    @JvmField
+    var rxSchedulers: TestRule = RxSchedulersOverride()
 
     @Mock
     lateinit var resumeUseCase: ResumeUseCase
@@ -26,7 +27,6 @@ class ResumeModelTest {
     fun setUp() {
         MockitoAnnotations.initMocks(this)
         resumeModel = ResumeModel(resumeUseCase)
-        RxAndroidPlugins.setInitMainThreadSchedulerHandler { Schedulers.trampoline() }
     }
 
     @Test
