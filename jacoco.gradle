@@ -24,7 +24,9 @@ task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
         '**/di/**',
         '**/adapters/**',
         '**/service/**',
-        '**/*Activity*.*'
+        '**/*Activity.*',
+        '**/*App.*',
+        '**/*Fragment.*'
 
     ]
     // generated classes
