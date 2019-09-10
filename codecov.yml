@@ -25,11 +25,11 @@ comment:
   behavior: default
   require_changes: no
 
-  ignore:
-    - "**/di/**"
-    - "**/io.realm/**"
-    - "**/adapters/**"
-    - "**/service/**"
-    - "**/*Activity.*"
-    - "**/*App.*"
-    - "**/*Fragment.*"
+ignore:
+  - "**/di/**"
+  - "**/io.realm/**"
+  - "**/adapters/**"
+  - "**/service/**"
+  - "**/*Activity.*"
+  - "**/*App.*"
+  - "**/*Fragment.*"
