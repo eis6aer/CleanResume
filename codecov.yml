@@ -31,4 +31,5 @@ comment:
     - "**/*Fragment*.*"
     - "**/*Activity*.*"
     - "**/adapters/**"
+    - "**/di/**"
     - "**/*Contract*.*"
