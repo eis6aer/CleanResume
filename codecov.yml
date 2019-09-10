@@ -26,9 +26,8 @@ comment:
   require_changes: no
 
   ignore:
-    - "**/di/**"       # ignore dagger
-    - "**/io.realm/**"
     - "**/di/**"
+    - "**/io.realm/**"
     - "**/adapters/**"
     - "**/service/**"
     - "**/*Activity.*"
