@@ -46,10 +46,11 @@ before_install:
   - mkdir "$ANDROID_HOME/licenses" || true
   - cp ./android-sdk-license/* "$ANDROID_HOME/licenses/"
   - chmod +x gradlew
+  - pip install --user codecov
   - ./gradlew dependencies || true
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
 
 script:
   - echo "Building app"
