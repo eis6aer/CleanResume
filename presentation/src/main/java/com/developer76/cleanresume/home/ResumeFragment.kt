@@ -41,7 +41,7 @@ class ResumeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_resume, container, false)
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)
         presenter.init()
