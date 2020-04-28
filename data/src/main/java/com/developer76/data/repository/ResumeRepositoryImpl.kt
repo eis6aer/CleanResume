@@ -13,6 +13,7 @@ class ResumeRepositoryImpl @Inject constructor(
 ): ResumeRepository {
     override fun getResume(): Single<Resume> {
         return resumeRemoteDataSource.getResume()
-            .flatMap { resume -> resumeLocalDataSource.saveResume(resume).andThen(Single.just(resume)) }
+            .flatMap { resume -> resumeLocalDataSource.saveResume(resume)
+                .andThen(Single.just(resume)) }
     }
 }

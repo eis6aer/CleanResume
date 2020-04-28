@@ -9,8 +9,8 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
-        AppModule::class,
-        AndroidInjectionModule::class])
+        AppModule::class, // My module
+        AndroidInjectionModule::class]) // Para poder hacer la inyeccion de Activity y de Fragments
 interface AppComponent : AndroidInjector<ResumeApp> {
 
     @Component.Factory

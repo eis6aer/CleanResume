@@ -1,6 +1,5 @@
 package com.developer76.cleanresume.mvp.resume
 
-import android.util.Log
 import javax.inject.Inject
 
 class ResumePresenter @Inject constructor(
@@ -12,7 +11,7 @@ class ResumePresenter @Inject constructor(
             .subscribe({
                 view.updateResume(it)
             }, {
-                Log.e("ResumePresenter", it.localizedMessage)
+                // Do nothing
             })
     }
 
