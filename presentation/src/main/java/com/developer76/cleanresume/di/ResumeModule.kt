@@ -11,7 +11,6 @@ import com.developer76.cleanresume.mvp.resume.ResumeView
 import com.developer76.data.di.RepositoryModule
 import dagger.Binds
 import dagger.Module
-import dagger.Reusable
 
 @Module(includes = [RepositoryModule::class])
 abstract class ResumeModule {

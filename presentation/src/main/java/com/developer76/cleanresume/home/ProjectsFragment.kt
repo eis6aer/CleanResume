@@ -1,7 +1,6 @@
 package com.developer76.cleanresume.home
 
 
-import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,9 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.developer76.cleanresume.R
-import com.developer76.cleanresume.mvp.resume.ResumeContract
 import dagger.android.support.AndroidSupportInjection
-import javax.inject.Inject
 
 class ProjectsFragment : Fragment() {
 
@@ -28,7 +25,7 @@ class ProjectsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_projects, container, false)
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)
     }

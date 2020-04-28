@@ -3,7 +3,7 @@ ext {
     rxJavaAndroidVersion = '2.1.0'
     retrofitVersion = '2.3.0'
     gsonVersion = '2.0.1'
-    daggerAndroidVersion = '2.21'
+    daggerAndroidVersion = '2.27'
     httpLoggingInterceptorVersion = '3.9.0'
 
     mainDependencies = [
